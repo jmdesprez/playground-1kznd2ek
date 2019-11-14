@@ -1,4 +1,4 @@
-fun msg(channel: String, msg: String?) {
+fun message(channel: String, msg: String?) {
     println("""TECHIO> message --channel "$channel" "$msg"""")
 }
 
@@ -7,7 +7,9 @@ fun success(success: Boolean) {
 }
 
 class Channel(private val name: String) {
-    fun msg(msg: String?) = msg(name, msg)
+    fun message(msg: String?) = message(name, msg)
+    fun annotate(filePath: String, line: Int, msg: String, column: Int?, type: AnnotateType = AnnotateType.ERROR) =
+        annotate(filePath, line, msg, column, type, name)
 }
 
 fun channel(name: String, block: Channel.() -> Unit) {
@@ -28,8 +30,8 @@ fun annotate(
     type: AnnotateType = AnnotateType.ERROR,
     channel: String?
 ) {
-//    fun String.escape() = """"${replace("\"", "\\\"")}""""
-    fun String.escape() = """"${this}""""
+        fun String.escape() = """"${replace("\"", "\\\\\"")}""""
+//    fun String.escape() = """"${this}""""
 
     val position = if (column != null) "$line:$column" else "$line"
 

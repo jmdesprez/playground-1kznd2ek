@@ -12,34 +12,33 @@ class UniverseTest {
 
             if (existsInFile("galaxies.sum()", File("src/main/kotlin/bowling/bowling.kt"))) {
                 channel("My personal Yoda, you are. 🙏") {
-                    msg("* ● ¸ .　¸. :° ☾ ° 　¸. ● ¸ .　　¸.　:. • ")
-                    msg("           　★ °  ☆ ¸. ¸ 　★　 :.　 .   ")
-                    msg("__.-._     ° . .　　　　.　☾ ° 　. *   ¸ .")
-                    msg("'-._\\7'      .　　° ☾  ° 　¸.☆  ● .　　　")
-                    msg(" /'.-c    　   * ●  ¸.　　°     ° 　¸.    ")
-                    msg(" |  /T      　　°     ° 　¸.     ¸ .　　  ")
-                    msg("_)_/LI");
+                    message("* ● ¸ .　¸. :° ☾ ° 　¸. ● ¸ .　　¸.　:. • ")
+                    message("           　★ °  ☆ ¸. ¸ 　★　 :.　 .   ")
+                    message("__.-._     ° . .　　　　.　☾ ° 　. *   ¸ .")
+                    message("'-._\\7'      .　　° ☾  ° 　¸.☆  ● .　　　")
+                    message(" /'.-c    　   * ●  ¸.　　°     ° 　¸.    ")
+                    message(" |  /T      　　°     ° 　¸.     ¸ .　　  ")
+                    message("_)_/LI");
                 }
             } else {
                 channel("Kudos 🌟") {
-                    msg("Did you know that in Kotlin you can use the sum() function directly on an Array? Try it!")
-                    msg("")
-                    msg("var galaxies = arrayOf(37, 3, 2)")
-                    msg("var totalStars = galaxies.sum() // 42")
+                    message("Did you know that in Kotlin you can use the sum() function directly on an Array? Try it!")
+                    message("")
+                    message("var galaxies = arrayOf(37, 3, 2)")
+                    message("var totalStars = galaxies.sum() // 42")
+                    annotate(
+                        "src/main/kotlin/bowling/bowling.kt",
+                        4,
+                        "test annotation \"ok\"",
+                        17,
+                        AnnotateType.INFO
+                    )
                 }
-                annotate(
-                    "src/main/kotlin/bowling/bowling.kt",
-                    4,
-                    "test annotation \"ok\"",
-                    17,
-                    AnnotateType.INFO,
-                    "annotation_test"
-                )
             }
         } catch (ae: AssertionError) {
             success(false)
-            msg("Oops! 🐞", ae.message)
-            msg("Hint 💡", "Did you properly accumulate all stars into 'totalStars'? 🤔")
+            message("Oops! 🐞", ae.message)
+            message("Hint 💡", "Did you properly accumulate all stars into 'totalStars'? 🤔")
         }
     }
 
