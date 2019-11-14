@@ -12,20 +12,22 @@ class UniverseTest {
 
             if (existsInFile("bowling", File("src/main/kotlin/bowling/bowling.kt"))) {
                 channel("My personal Yoda, you are. 🙏") {
-                    message("* ● ¸ .　¸. :° ☾ ° 　¸. ● ¸ .　　¸.　:. • ")
-                    message("           　★ °  ☆ ¸. ¸ 　★　 :.　 .   ")
-                    message("__.-._     ° . .　　　　.　☾ ° 　. *   ¸ .")
-                    message("'-._\\7'      .　　° ☾  ° 　¸.☆  ● .　　　")
-                    message(" /'.-c    　   * ●  ¸.　　°     ° 　¸.    ")
-                    message(" |  /T      　　°     ° 　¸.     ¸ .　　  ")
-                    message("_)_/LI");
+                    write("""
+                        |* ● ¸ .　¸. :° ☾ ° 　¸. ● ¸ .　　¸.　:. • 
+                        |           　★ °  ☆ ¸. ¸ 　★　 :.　 .   
+                        |__.-._     ° . .　　　　.　☾ ° 　. *   ¸ .
+                        |'-._\7'      .　　° ☾  ° 　¸.☆  ● .　　　
+                        | /'.-c    　   * ●  ¸.　　°     ° 　¸.    
+                        | |  /T      　　°     ° 　¸.     ¸ .　　
+                        |_)_/LI
+                    """.trimMargin())
                 }
             } else {
                 channel("Kudos 🌟") {
-                    message("Did you know that in Kotlin you can use the sum() function directly on an Array? Try it!")
-                    message("")
-                    message("var galaxies = arrayOf(37, 3, 2)")
-                    message("var totalStars = galaxies.sum() // 42")
+                    write("Did you know that in Kotlin you can use the sum() function directly on an Array? Try it!")
+                    write("")
+                    write("var galaxies = arrayOf(37, 3, 2)")
+                    write("var totalStars = galaxies.sum() // 42")
                     annotate(
                         "src/main/kotlin/bowling/bowling.kt",
                         4,

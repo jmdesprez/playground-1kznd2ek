@@ -7,7 +7,7 @@ fun success(success: Boolean) {
 }
 
 class Channel(private val name: String) {
-    fun message(msg: String?) = message(name, msg)
+    fun write(msg: String?) = message(name, msg)
     fun annotate(filePath: String, line: Int, msg: String, column: Int?, type: AnnotateType = AnnotateType.ERROR) =
         annotate(filePath, line, msg, column, type, name)
 }
