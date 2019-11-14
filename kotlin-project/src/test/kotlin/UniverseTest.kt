@@ -10,7 +10,7 @@ class UniverseTest {
             //			Assert.assertEquals("Running countAllStars(2, 3)...", 5, 5)
             success(true)
 
-            if (existsInFile("galaxies.sum()", File("src/main/kotlin/bowling/bowling.kt"))) {
+            if (existsInFile("bowling", File("src/main/kotlin/bowling/bowling.kt"))) {
                 channel("My personal Yoda, you are. 🙏") {
                     message("* ● ¸ .　¸. :° ☾ ° 　¸. ● ¸ .　　¸.　:. • ")
                     message("           　★ °  ☆ ¸. ¸ 　★　 :.　 .   ")

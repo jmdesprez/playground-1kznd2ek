@@ -30,8 +30,7 @@ fun annotate(
     type: AnnotateType = AnnotateType.ERROR,
     channel: String?
 ) {
-        fun String.escape() = """"${replace('"', '\'')}""""
-//    fun String.escape() = """"${this}""""
+    fun String.escape() = """"${replace('"', '\'')}""""
 
     val position = if (column != null) "$line:$column" else "$line"
 
@@ -46,8 +45,4 @@ fun annotate(
         }
 
     println("TECHIO> annotate $options ${msg.escape()}")
-}
-
-fun main(args: Array<String>) {
-    annotate("Main.java", 4, "test annotation \"ok\"", 8, AnnotateType.WARNING, "compilation")
 }
