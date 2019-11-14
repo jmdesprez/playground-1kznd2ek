@@ -28,7 +28,8 @@ fun annotate(
     type: AnnotateType = AnnotateType.ERROR,
     channel: String?
 ) {
-    fun String.escape() = """"${replace("\"", "\\\"")}""""
+//    fun String.escape() = """"${replace("\"", "\\\"")}""""
+    fun String.escape() = """"${this}""""
 
     val position = if (column != null) "$line:$column" else "$line"
 
@@ -46,5 +47,5 @@ fun annotate(
 }
 
 fun main(args: Array<String>) {
-    annotate("Main.java", 4, "mlkjlmf \" not found", 8, AnnotateType.WARNING, "compilation")
+    annotate("Main.java", 4, "test annotation \"ok\"", 8, AnnotateType.WARNING, "compilation")
 }
