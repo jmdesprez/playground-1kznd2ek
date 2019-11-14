@@ -7,7 +7,7 @@ The source code is on [GitHub](https://github.com/TechDotIO/advanced-kotlin-temp
 
 # Hands-on Demo
 
-@[Luke, how many stars are there in these galaxies?]({"stubs": ["src/universe.kt"], "command": "UniverseTest#test"})
+@[Luke, how many stars are there in these galaxies?]({"stubs": ["src/main/kotlin/bowling/bowling.kt"], "command": "UniverseTest"})
 
 Check out the markdown file [`welcome.md`](https://github.com/TechDotIO/advanced-kotlin-template/blob/master/markdowns/welcome.md) to see how this exercise is injected into the template.
 
