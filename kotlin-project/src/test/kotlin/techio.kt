@@ -30,7 +30,7 @@ fun annotate(
     type: AnnotateType = AnnotateType.ERROR,
     channel: String?
 ) {
-        fun String.escape() = """"${replace("\"", "\\\\\"")}""""
+        fun String.escape() = """"${replace('"', '\'')}""""
 //    fun String.escape() = """"${this}""""
 
     val position = if (column != null) "$line:$column" else "$line"
