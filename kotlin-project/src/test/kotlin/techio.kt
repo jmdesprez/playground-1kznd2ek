@@ -26,9 +26,9 @@ fun annotate(
     filePath: String,
     line: Int,
     msg: String,
-    column: Int?,
+    column: Int? = null,
     type: AnnotateType = AnnotateType.ERROR,
-    channel: String?
+    channel: String? = null
 ) {
     fun String.escape() = """"${replace('"', '\'')}""""
 
