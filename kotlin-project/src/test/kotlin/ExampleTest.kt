@@ -16,7 +16,7 @@ class ExampleTest {
                 )
             )
 
-            Assert.assertEquals("Les calculs sont pas bon Kévin", total, 123)
+            Assert.assertEquals("Les calculs sont pas bon Kévin",123, total)
 
             if (File("src/main/kotlin/hacky/example.kt").anyLine() {
                     it.contains(".sum()")
